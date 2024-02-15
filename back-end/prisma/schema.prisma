@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int              @id @default(autoincrement())
+  email     String           @unique
+  name      String
+  password  String
+  active    Boolean
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  locations Location[]
+  termine   UsersOnTermine[]
+  createdTermine    Termin[]
+}
+
+model Location {
+  id          Int      @id @default(autoincrement())
+  name        String?
+  adress      String   @unique
+  latitude    Float
+  longitude   Float
+  observation String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  addedBy     User     @relation(fields: [addedById], references: [id])
+  addedById   Int
+  sportsList  String[]
+  termine     Termin[]
+}
+
+model Termin {
+  id         Int              @id @default(autoincrement())
+  sport      String
+  location   Location         @relation(fields: [locationId], references: [id])
+  locationId Int
+  startAt    DateTime
+  endAt      DateTime
+  users      UsersOnTermine[]
+  createdBy  User             @relation(fields: [userId], references: [id])
+  userId     Int
+}
+
+model UsersOnTermine {
+  users    User   @relation(fields: [userId], references: [id])
+  userId   Int
+  termine  Termin @relation(fields: [terminId], references: [id])
+  terminId Int
+
+  @@id([userId, terminId])
+}
