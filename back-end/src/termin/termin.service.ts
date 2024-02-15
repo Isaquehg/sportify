@@ -5,7 +5,7 @@ import { PrismaClient, Termin } from '@prisma/client';
 
 @Injectable()
 export class TerminService {
-  constructor(private prismaClient: PrismaClient) { }
+  constructor(private prismaClient: PrismaClient) {}
 
   async create(
     userID: number,

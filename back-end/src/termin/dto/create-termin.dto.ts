@@ -13,4 +13,6 @@ export class CreateTerminDto {
   @ApiProperty()
   @IsNotEmpty()
   endAt: Date;
+
+  
 }
