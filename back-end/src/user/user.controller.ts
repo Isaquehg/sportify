@@ -1,12 +1,22 @@
+import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
-import { Controller, Get } from '@nestjs/common';
 
-@Controller('user')
+@Controller('users')
 export class UserController {
-  constructor(private userService: UserService) {}
+  constructor(private readonly userService: UserService) {}
 
   @Get()
-  userInfo() {
-    return this.userService.userInfo;
+  async findUsersBySport() {
+    return this.userService.findAllUsers();
+  }
+
+  @Get(':id')
+  async findUserById(@Param('id') id: string) {
+    return this.userService.findUserById(id);
+  }
+
+  @Delete(':id')
+  async deleteUser(@Param('id') id: string) {
+    return this.userService.deleteUser(id);
   }
 }

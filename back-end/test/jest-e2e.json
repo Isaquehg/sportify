@@ -5,5 +5,12 @@
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
-  }
+  },
+  "testTimeout": 10000,
+  "reporters": [
+    ["jest-junit", {
+      "outputDirectory": "test/e2e-reports/",
+      "outputName": "report.xml"
+    }]
+  ]
 }

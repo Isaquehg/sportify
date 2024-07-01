@@ -1,17 +1,22 @@
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { Controller, Post } from '@nestjs/common';
+import { LoginUserDto } from './dto/login-user.dto';
+import { RegisterUserDto } from './dto/register-user.dto';
+import { Public } from './utils/skip-auth.decorator';
 
+@Public()
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService){}
 
-  @Post('login')
-  signin() {
-    return { message: 'Signin' };
-  }
+    @Post('register')
+    async register(@Body() registerDTO: RegisterUserDto) {
+        return await this.authService.register(registerDTO);
+    }
 
-  @Post('register')
-  signup() {
-    return { message: 'Signup' };
-  }
+    @Post('login')
+    async signin(@Body() loginUserDTO: LoginUserDto) {
+        return await this.authService.login(loginUserDTO);
+    }
+
 }

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="10" errors="0" time="32.693">
+  <testsuite name="Event Endpoints (e2e)" errors="0" failures="7" skipped="0" timestamp="2024-06-19T23:58:15" time="22.017" tests="7">
+    <testcase classname="Event Endpoints (e2e) Should create an event (POST)" name="Event Endpoints (e2e) Should create an event (POST)" time="0.007">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should see open events (GET)" name="Event Endpoints (e2e) Should see open events (GET)" time="0.001">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should get details of a specific event (GET)" name="Event Endpoints (e2e) Should get details of a specific event (GET)" time="0">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should register for an event (POST)" name="Event Endpoints (e2e) Should register for an event (POST)" time="0">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should unregister from an event (POST)" name="Event Endpoints (e2e) Should unregister from an event (POST)" time="0">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should close an event (POST)" name="Event Endpoints (e2e) Should close an event (POST)" time="0">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Event Endpoints (e2e) Should see open events from specific sport (GET)" name="Event Endpoints (e2e) Should see open events from specific sport (GET)" time="0">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:13:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname=" Test execution failure: could be caused by test hooks like &apos;afterAll&apos;." name=" Test execution failure: could be caused by test hooks like &apos;afterAll&apos;." time="0">
+      <failure>{&quot;message&quot;:&quot;&quot;,&quot;stack&quot;:&quot;Error: thrown: \&quot;Exceeded timeout of 10000 ms for a hook.\nAdd a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.\&quot;\n    at /Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:32:3\n    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)\n    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)\n    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/event.e2e-spec.ts:7:1)\n    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)\n    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)\n    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)\n    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)\n    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)&quot;}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication Endpoints (e2e)" errors="0" failures="3" skipped="0" timestamp="2024-06-19T23:58:15" time="32.006" tests="3">
+    <testcase classname="Authentication Endpoints (e2e) Should register new user (POST)" name="Authentication Endpoints (e2e) Should register new user (POST)" time="10.003">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:11:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Authentication Endpoints (e2e) Should signin user (POST)" name="Authentication Endpoints (e2e) Should signin user (POST)" time="10.002">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:11:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Authentication Endpoints (e2e) Should get Hello (GET)" name="Authentication Endpoints (e2e) Should get Hello (GET)" time="10.012">
+      <failure>Error: thrown: &quot;Exceeded timeout of 10000 ms for a hook.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at /Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:11:3
+    at _dispatchDescribe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:91:26)
+    at describe (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/index.js:55:5)
+    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:7:1)
+    at Runtime._execModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname=" Test execution failure: could be caused by test hooks like &apos;afterAll&apos;." name=" Test execution failure: could be caused by test hooks like &apos;afterAll&apos;." time="0">
+      <failure>{&quot;message&quot;:&quot;&quot;,&quot;stack&quot;:&quot;TypeError: Cannot read properties of undefined (reading &apos;close&apos;)\n    at Object.&lt;anonymous&gt; (/Users/isaquehg/Documents/devops/sportify/test/auth.e2e-spec.ts:55:15)\n    at Promise.then.completed (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (&lt;anonymous&gt;)\n    at callAsyncCircusFn (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusHook (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/run.js:281:40)\n    at _runTestsForDescribeBlock (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/run.js:154:7)\n    at _runTestsForDescribeBlock (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/runTest.js:444:34)\n    at Object.worker (/Users/isaquehg/Documents/devops/sportify/node_modules/jest-runner/build/testWorker.js:106:12)&quot;}</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
