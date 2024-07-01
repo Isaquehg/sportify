@@ -33,7 +33,7 @@ describe('Authentication Endpoints (e2e)', () => {
     const response = await request(app.getHttpServer())
       .post('/auth/login')
       .send({
-        email: 'larry@email.com',
+        email: 'CleverLion1719841986079@email.com',
         password: '12345678910'
       })
       .expect(201);
@@ -57,8 +57,8 @@ describe('Authentication Endpoints (e2e)', () => {
   });
 
   function generateRandomName() {
-    const adjectives = ['Happy', 'Clever', 'Brave', 'Kind', 'Wise', 'Gentle', 'Strong', 'Lucky', 'Bright', 'Joyful'];
-    const nouns = ['Cat', 'Dog', 'Bird', 'Tiger', 'Lion', 'Bear', 'Fox', 'Elephant', 'Dolphin', 'Wolf'];
+    const adjectives = ['Happy', 'Clever', 'Brave', 'Kind', 'Wise', 'Gentle', 'Strong', 'Lucky', 'Bright', 'Joyful', 'Wild'];
+    const nouns = ['Cat', 'Dog', 'Bird', 'Tiger', 'Lion', 'Bear', 'Fox', 'Elephant', 'Dolphin', 'Wolf', 'Raccoon'];
     const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
     const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
     const currentTime = new Date();

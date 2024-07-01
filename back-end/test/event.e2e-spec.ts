@@ -22,7 +22,7 @@ describe('Event Endpoints (e2e)', () => {
     const loginResponse = await request(app.getHttpServer())
       .post('/auth/login')
       .send({
-        email: 'larry@email.com',
+        email: 'CleverLion1719841986079@email.com',
         password: '12345678910'
       });
 
@@ -47,8 +47,8 @@ describe('Event Endpoints (e2e)', () => {
       startAt: startAt.toISOString(),
       endAt: endAt.toISOString(),
       participants: [
-        { userId: '611f0554c3c20f47982a9e55' },
-        { userId: '663a396ed521a7ac74fd263b' }
+        { userId: '6682b769e2c3c550d95b5eac' },
+        { userId: '6682b5689e747746cb48ddaa' }
       ],
       location: { type: 'Point', coordinates: [-73.856077, 40.848447] },
       maxParticipants: 4
@@ -68,7 +68,7 @@ describe('Event Endpoints (e2e)', () => {
 
   it('Should get details of a specific event (GET)', () => {
     return request(app.getHttpServer())
-      .get('/event/663929489bbf07ae9b7815bb')
+      .get('/event/6682b7a0b5d3bbb229219cc1')
       .set('Authorization', `Bearer ${token}`)
       .expect(200);
   });
@@ -78,7 +78,7 @@ describe('Event Endpoints (e2e)', () => {
       .post(`/event/${eventId}/register`)
       .set('Authorization', `Bearer ${token}`)
       .send({
-        userId: '663a2e83b973c4264623cd9a'
+        userId: '6682b79b35f4f617a4a55109'
       })
       .expect(201);
   });
@@ -88,7 +88,7 @@ describe('Event Endpoints (e2e)', () => {
       .post(`/event/${eventId}/unregister`)
       .set('Authorization', `Bearer ${token}`)
       .send({
-        userId: '611f0554c3c20f47982a9e55'
+        userId: '6682b79b35f4f617a4a55109'
       })
       .expect(201);
   });
