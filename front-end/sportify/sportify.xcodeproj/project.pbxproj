@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		FA2B61742C4AEE5E00DDCC6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61732C4AEE5E00DDCC6F /* User.swift */; };
 		FA2B61762C4AEF6700DDCC6F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61752C4AEF6600DDCC6F /* Event.swift */; };
+		FA2B61782C5287EB00DDCC6F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61772C5287EB00DDCC6F /* MainView.swift */; };
+		FA2B617A2C5287FB00DDCC6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61792C5287FB00DDCC6F /* LoginView.swift */; };
+		FA2B617C2C52880B00DDCC6F /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B617B2C52880B00DDCC6F /* EventRowView.swift */; };
+		FA2B617E2C52882200DDCC6F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B617D2C52882200DDCC6F /* AuthService.swift */; };
+		FA2B61802C52882B00DDCC6F /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B617F2C52882B00DDCC6F /* EventService.swift */; };
+		FA2B61822C52883F00DDCC6F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61812C52883F00DDCC6F /* LoginViewModel.swift */; };
+		FA2B61842C52884A00DDCC6F /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61832C52884A00DDCC6F /* EventViewModel.swift */; };
+		FA2B61862C52885700DDCC6F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61852C52885700DDCC6F /* MainViewModel.swift */; };
+		FA2B61882C528DF700DDCC6F /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B61872C528DF700DDCC6F /* BottomBarView.swift */; };
+		FA2B618C2C5291A100DDCC6F /* SafeAreaIntentsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B618B2C5291A100DDCC6F /* SafeAreaIntentsKey.swift */; };
 		FA62DFFF2C33709000E9653E /* sportifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62DFFE2C33709000E9653E /* sportifyApp.swift */; };
 		FA62E0012C33709000E9653E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62E0002C33709000E9653E /* ContentView.swift */; };
 		FA62E0032C33709100E9653E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA62E0022C33709100E9653E /* Assets.xcassets */; };
@@ -38,6 +48,16 @@
 /* Begin PBXFileReference section */
 		FA2B61732C4AEE5E00DDCC6F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA2B61752C4AEF6600DDCC6F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FA2B61772C5287EB00DDCC6F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FA2B61792C5287FB00DDCC6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FA2B617B2C52880B00DDCC6F /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
+		FA2B617D2C52882200DDCC6F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FA2B617F2C52882B00DDCC6F /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		FA2B61812C52883F00DDCC6F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FA2B61832C52884A00DDCC6F /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		FA2B61852C52885700DDCC6F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FA2B61872C528DF700DDCC6F /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		FA2B618B2C5291A100DDCC6F /* SafeAreaIntentsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaIntentsKey.swift; sourceTree = "<group>"; };
 		FA62DFFB2C33709000E9653E /* sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62DFFE2C33709000E9653E /* sportifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sportifyApp.swift; sourceTree = "<group>"; };
 		FA62E0002C33709000E9653E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +98,11 @@
 		FA2B616E2C4AED2800DDCC6F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B61772C5287EB00DDCC6F /* MainView.swift */,
+				FA2B61792C5287FB00DDCC6F /* LoginView.swift */,
+				FA2B617B2C52880B00DDCC6F /* EventRowView.swift */,
+				FA2B61872C528DF700DDCC6F /* BottomBarView.swift */,
+				FA2B618B2C5291A100DDCC6F /* SafeAreaIntentsKey.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +119,9 @@
 		FA2B61702C4AED3A00DDCC6F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B61812C52883F00DDCC6F /* LoginViewModel.swift */,
+				FA2B61832C52884A00DDCC6F /* EventViewModel.swift */,
+				FA2B61852C52885700DDCC6F /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -101,6 +129,8 @@
 		FA2B61712C4AED4600DDCC6F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B617D2C52882200DDCC6F /* AuthService.swift */,
+				FA2B617F2C52882B00DDCC6F /* EventService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -303,10 +333,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2B617A2C5287FB00DDCC6F /* LoginView.swift in Sources */,
+				FA2B617C2C52880B00DDCC6F /* EventRowView.swift in Sources */,
 				FA2B61762C4AEF6700DDCC6F /* Event.swift in Sources */,
+				FA2B61842C52884A00DDCC6F /* EventViewModel.swift in Sources */,
+				FA2B61882C528DF700DDCC6F /* BottomBarView.swift in Sources */,
 				FA62E0012C33709000E9653E /* ContentView.swift in Sources */,
 				FA62DFFF2C33709000E9653E /* sportifyApp.swift in Sources */,
+				FA2B618C2C5291A100DDCC6F /* SafeAreaIntentsKey.swift in Sources */,
+				FA2B61782C5287EB00DDCC6F /* MainView.swift in Sources */,
+				FA2B61802C52882B00DDCC6F /* EventService.swift in Sources */,
 				FA2B61742C4AEE5E00DDCC6F /* User.swift in Sources */,
+				FA2B61822C52883F00DDCC6F /* LoginViewModel.swift in Sources */,
+				FA2B617E2C52882200DDCC6F /* AuthService.swift in Sources */,
+				FA2B61862C52885700DDCC6F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
