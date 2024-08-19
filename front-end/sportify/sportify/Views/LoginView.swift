@@ -6,8 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct LoginView: View {
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var manager = DataPost()
+    
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea()
@@ -16,34 +22,43 @@ struct LoginView: View {
                     .resizable()
                     .frame(width: 190, height: 190)
                     .padding(30)
+                
+                Form{
+                    Section() {
+                        TextField("Email", text: $email)
+                        TextField("Password", text: $password)
+                    }
                     
-                
-                TextField("E-mail", text: .constant(""))
-                    .padding()
-                    .foregroundColor(.green)
-                    .background(Color(.systemGray5))
-                    .cornerRadius(10)
-                
-                TextField("Password", text: .constant(""))
-                    .padding()
-                    .foregroundColor(.green)
-                    .background(Color(.systemGray5))
-                    .cornerRadius(10)
-                
-                HStack {
-                    Text("Forgot your password?")
-                        .foregroundColor(.black)
-                    Text("Click here")
-                        .foregroundColor(.green)
+                    Section() {
+                        HStack {
+                            Text("Forgot your password?")
+                                .foregroundColor(.black)
+                            Text("Click here")
+                                .foregroundColor(.green)
+                        }
+                    }
+                    
+                    Section() {
+                        Button(action: {
+                            print("Clicked :)")
+                            
+                            self.manager.checkDetails(email: self.email, password: self.password)
+                            
+                        }) {
+                            Text("Let's Start!")
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                        }
+                        .disabled(email.isEmpty || password.isEmpty)
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .controlSize(.large)
+                        
+                    }
                 }
-                
-                Text("Let's Play!")
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 350, height: 57.0)
-                    .background(Color.green)
-                    .cornerRadius(10)
                 
                 Divider()
                     .padding()
@@ -60,31 +75,51 @@ struct LoginView: View {
                         .font(.title2)
                 }
                 
-                Button {
-                    print("Edit button was tapped")
-                } label: {
-                    Label("Login with Facebook                 ", systemImage: "person.2.circle.fill")
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(.blue)
-                        .cornerRadius(10)
-                        .font(.title2)
-                }
-                
-                Button {
-                    print("Edit button was tapped")
-                } label: {
-                    Label("Login with Google                      ", systemImage: "circle.hexagonpath.fill")
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(.red)
-                        .cornerRadius(10)
-                        .font(.title2)
-                }
-                
                 
             }.padding()
         }
+    }
+}
+
+class DataPost: ObservableObject {
+    var didChange = PassthroughSubject<DataPost, Never>()
+    var formCompleted = false {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    func checkDetails(email: String, password: String) {
+        
+        let body: [String: Any] = ["data": ["email": email, "password": password]]
+                
+        let jsonData = try? JSONSerialization.data(withJSONObject: body)
+                
+        let url = URL(string: "https://sportify.com/login")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        
+        request.setValue("\(String(describing: jsonData?.count))", forHTTPHeaderField: "Content-Length")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpBody = jsonData
+
+        print(body)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+
+        task.resume()
     }
 }
 
