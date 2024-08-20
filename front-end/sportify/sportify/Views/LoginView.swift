@@ -26,7 +26,7 @@ struct LoginView: View {
                 Form{
                     Section() {
                         TextField("Email", text: $email)
-                        TextField("Password", text: $password)
+                        SecureField("Password", text: $password)
                     }
                     
                     Section() {
