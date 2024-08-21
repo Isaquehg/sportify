@@ -21,6 +21,8 @@
 		FA2B618C2C5291A100DDCC6F /* SafeAreaIntentsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B618B2C5291A100DDCC6F /* SafeAreaIntentsKey.swift */; };
 		FA5FB65B2C751E81001E557C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FB65A2C751E81001E557C /* LoginRequest.swift */; };
 		FA5FB65D2C751E95001E557C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FB65C2C751E95001E557C /* LoginResponse.swift */; };
+		FA5FB65F2C766C6F001E557C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FB65E2C766C6F001E557C /* Auth.swift */; };
+		FA5FB6622C766E08001E557C /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA5FB6612C766E08001E557C /* KeychainSwift */; };
 		FA62DFFF2C33709000E9653E /* sportifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62DFFE2C33709000E9653E /* sportifyApp.swift */; };
 		FA62E0012C33709000E9653E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62E0002C33709000E9653E /* ContentView.swift */; };
 		FA62E0032C33709100E9653E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA62E0022C33709100E9653E /* Assets.xcassets */; };
@@ -62,6 +64,7 @@
 		FA2B618B2C5291A100DDCC6F /* SafeAreaIntentsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaIntentsKey.swift; sourceTree = "<group>"; };
 		FA5FB65A2C751E81001E557C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		FA5FB65C2C751E95001E557C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		FA5FB65E2C766C6F001E557C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FA62DFFB2C33709000E9653E /* sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62DFFE2C33709000E9653E /* sportifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sportifyApp.swift; sourceTree = "<group>"; };
 		FA62E0002C33709000E9653E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5FB6622C766E08001E557C /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 		FA2B61722C4AED4B00DDCC6F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA5FB65E2C766C6F001E557C /* Auth.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -225,6 +230,9 @@
 			dependencies = (
 			);
 			name = sportify;
+			packageProductDependencies = (
+				FA5FB6612C766E08001E557C /* KeychainSwift */,
+			);
 			productName = sportify;
 			productReference = FA62DFFB2C33709000E9653E /* sportify.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +305,9 @@
 				Base,
 			);
 			mainGroup = FA62DFF22C33709000E9653E;
+			packageReferences = (
+				FA5FB6602C766E08001E557C /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = FA62DFFC2C33709000E9653E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +357,7 @@
 				FA2B61842C52884A00DDCC6F /* EventViewModel.swift in Sources */,
 				FA2B61882C528DF700DDCC6F /* BottomBarView.swift in Sources */,
 				FA5FB65D2C751E95001E557C /* LoginResponse.swift in Sources */,
+				FA5FB65F2C766C6F001E557C /* Auth.swift in Sources */,
 				FA62E0012C33709000E9653E /* ContentView.swift in Sources */,
 				FA62DFFF2C33709000E9653E /* sportifyApp.swift in Sources */,
 				FA2B618C2C5291A100DDCC6F /* SafeAreaIntentsKey.swift in Sources */,
@@ -678,6 +690,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5FB6602C766E08001E557C /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA5FB6612C766E08001E557C /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5FB6602C766E08001E557C /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA62DFF32C33709000E9653E /* Project object */;
 }
