@@ -9,23 +9,16 @@ import Foundation
 
 class AuthService {
     
-    static let shared = AuthService()
+    public init() {}
     
-    private init() {}
-    
-    func login(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func login(loginRequest: LoginRequest, completion: @escaping (Result<String, Error>) -> Void) {
         let url = URL(string: "https://yourapi.com/login")! // todo
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let body: [String: Any] = [
-            "email": email,
-            "password": password
-        ]
-        
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+    
+        request.httpBody = try? JSONSerialization.data(withJSONObject: loginRequest, options: .fragmentsAllowed)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -52,8 +45,8 @@ class AuthService {
         }.resume()
     }
     
-    private func saveToken(_ token: String) {
-        UserDefaults.standard.set(token, forKey: "jwtToken")
+    private func saveToken(_ token: String, _ refresh: String) {
+        Auth.shared.setCredentials(accessToken: token, refreshToken: refresh)
     }
     
     func getToken() -> String? {
