@@ -11,14 +11,20 @@ class AuthService {
     
     public init() {}
     
-    func login(loginRequest: LoginRequest, completion: @escaping (Result<String, Error>) -> Void) {
-        let url = URL(string: "https://yourapi.com/login")! // todo
+    func login(loginRequest: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
+        let url = URL(string: "https://yourapi.com/login")! // TODO
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
-        request.httpBody = try? JSONSerialization.data(withJSONObject: loginRequest, options: .fragmentsAllowed)
+        
+        // Codable
+        do {
+            request.httpBody = try JSONEncoder().encode(loginRequest)
+        } catch {
+            completion(.failure(error))
+            return
+        }
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -32,13 +38,10 @@ class AuthService {
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
-                if let token = json?["token"] as? String {
-                    self.saveToken(token)
-                    completion(.success(token))
-                } else {
-                    completion(.failure(NSError(domain: "", code: -1, userInfo: nil)))
-                }
+                // Decode as `LoginResponse`
+                let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+                self.saveToken(loginResponse.jwtToken, loginResponse.refreshToken)
+                completion(.success(loginResponse))
             } catch {
                 completion(.failure(error))
             }
@@ -50,6 +53,6 @@ class AuthService {
     }
     
     func getToken() -> String? {
-        return UserDefaults.standard.string(forKey: "jwtToken")
+        return Auth.shared.getAccessToken()
     }
 }

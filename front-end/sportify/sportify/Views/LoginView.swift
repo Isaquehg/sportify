@@ -9,8 +9,9 @@ import SwiftUI
 import Combine
 
 struct LoginView: View {
-    
-    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
+
+    @EnvironmentObject var navigationManager: NavigationManager
+    @ObservedObject var loginViewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
         ZStack {
@@ -22,8 +23,8 @@ struct LoginView: View {
                     .padding(30)
                 
                 Section() {
-                    TextField("Email", text: $viewModel.email)
-                    SecureField("Password", text: $viewModel.password)
+                    TextField("Email", text: $loginViewModel.email)
+                    SecureField("Password", text: $loginViewModel.password)
                 }.padding()
                     
                 
@@ -34,17 +35,17 @@ struct LoginView: View {
                         .foregroundColor(.green)
                 }
                 
-                Button(
-                    action: viewModel.login,
-                    label: {
-                        Text("Let's Play!")
-                    }
-                )
-                .font(.title2)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.green)
-                .cornerRadius(10)
+                Button(action: {
+                    loginViewModel.login()
+                }) {
+                    Text("Let's Play!")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                }
                 .controlSize(.large)
                 
                 Divider()
