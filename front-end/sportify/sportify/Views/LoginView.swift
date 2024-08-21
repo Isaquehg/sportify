@@ -10,9 +10,7 @@ import Combine
 
 struct LoginView: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var manager = DataPost()
+    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
         ZStack {
@@ -23,42 +21,31 @@ struct LoginView: View {
                     .frame(width: 190, height: 190)
                     .padding(30)
                 
-                Form{
-                    Section() {
-                        TextField("Email", text: $email)
-                        SecureField("Password", text: $password)
-                    }
+                Section() {
+                    TextField("Email", text: $viewModel.email)
+                    SecureField("Password", text: $viewModel.password)
+                }.padding()
                     
-                    Section() {
-                        HStack {
-                            Text("Forgot your password?")
-                                .foregroundColor(.black)
-                            Text("Click here")
-                                .foregroundColor(.green)
-                        }
-                    }
-                    
-                    Section() {
-                        Button(action: {
-                            print("Clicked :)")
-                            
-                            self.manager.checkDetails(email: self.email, password: self.password)
-                            
-                        }) {
-                            Text("Let's Start!")
-                                .fontWeight(.bold)
-                                .multilineTextAlignment(.center)
-                        }
-                        .disabled(email.isEmpty || password.isEmpty)
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .controlSize(.large)
-                        
-                    }
+                
+                HStack {
+                    Text("Forgot your password?")
+                        .foregroundColor(.black)
+                    Text("Click here")
+                        .foregroundColor(.green)
                 }
+                
+                Button(
+                    action: viewModel.login,
+                    label: {
+                        Text("Let's Play!")
+                    }
+                )
+                .font(.title2)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.green)
+                .cornerRadius(10)
+                .controlSize(.large)
                 
                 Divider()
                     .padding()
